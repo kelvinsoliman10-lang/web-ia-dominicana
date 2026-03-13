@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+:root {
+  --emerald-deep: #0B2B26;
+  --emerald-mid: #164A41;
+  --teal-dull: #235B54;
+  --accent-gold: #C9A050;
+  --gold-burnished: #9E7E38;
+  --bg-light: #FDFCF9;
+  --text-white: #FFFFFF;
+  --text-dark: #0B2B26;
+  --font-serif: 'Bodoni Moda', serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --transition-liquid: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  --glass: rgba(11, 43, 38, 0.1);
+  --noise: url('https://www.transparenttextures.com/patterns/p6.png');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* --- Grain/Noise Overlay for Luxury Feel --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--noise);
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.title-hero {
+  font-size: clamp(4rem, 12vw, 9rem);
+  line-height: 0.85;
+}
+
+.title-sec {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.text-gold {
+  color: var(--accent-gold);
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* --- Navigation --- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 6%;
+  z-index: 2000;
+  transition: var(--transition-liquid);
+}
+
+.header-blur {
+  background: rgba(11, 43, 38, 0.85);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  padding: 20px 6%;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 8px;
+  color: var(--emerald-deep);
+  text-decoration: none;
+  mix-blend-mode: difference;
+}
+
+[data-scroll-dir="down"] .logo {
+  color: var(--accent-gold);
+  mix-blend-mode: normal;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+}
+
+/* --- Hero Section --- */
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--emerald-deep);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent, var(--emerald-deep));
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: var(--text-white);
+}
+
+.btn-emerald {
+  padding: 20px 50px;
+  background-color: transparent;
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition-liquid);
+  margin-top: 40px;
+}
+
+.btn-emerald:hover {
+  background-color: var(--accent-gold);
+  color: var(--emerald-deep);
+  box-shadow: 0 0 40px rgba(201, 160, 80, 0.3);
+}
+
+/* --- Sections --- */
+section {
+  padding: 180px 10%;
+}
+
+.split-section {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.split-img {
+  width: 50%;
+  height: 75vh;
+  object-fit: cover;
+}
+
+.split-content {
+  width: 40%;
+}
+
+/* --- Product Cards --- */
+.grid-perfumes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.item-perfume {
+  background: var(--bg-light);
+  padding: 80px 40px;
+  border: 1px solid rgba(11, 43, 38, 0.05);
+  text-align: center;
+  transition: var(--transition-liquid);
+}
+
+.item-perfume img {
+  width: 100%;
+  margin-bottom: 50px;
+  transition: var(--transition-liquid);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+.item-perfume:hover {
+  background-color: var(--emerald-deep);
+  color: var(--text-white);
+  transform: translateY(-30px) scale(1.02);
+}
+
+.item-perfume:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* --- Custom Scroll Reveal --- */
+.line-reveal {
+  overflow: hidden;
+  display: block;
+}
+
+.char-reveal {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* --- Catalogue Styles --- */
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--emerald-deep);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  cursor: pointer;
+  padding: 10px 0;
+  opacity: 0.4;
+  transition: var(--transition-liquid);
+  outline: none;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  opacity: 1;
+  color: var(--accent-gold);
+}
+
+.category-label {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.notes {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  margin-top: 15px;
+}
+
+.item-perfume.hidden {
+  display: none;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--emerald-deep);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: var(--transition-liquid);
+  opacity: 0;
+  visibility: hidden;
+  text-decoration: none;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--accent-gold);
+  color: var(--emerald-deep);
+  transform: translateY(-5px);
+}
+
+/* --- Smooth Scrolling Fix --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .split-section {
+    flex-direction: column;
+  }
+
+  .split-img,
+  .split-content {
+    width: 100%;
+  }
+
+  .grid-perfumes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-perfumes {
+    grid-template-columns: 1fr;
+  }
+
+  .title-hero {
+    font-size: 3.5rem;
+  }
+}

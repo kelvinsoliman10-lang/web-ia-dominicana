@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERFORM. | Emerald Luxury Collection</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- GSAP Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script> <!-- For text animations -->
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">PERFORM.</a>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#catalogue">CATÁLOGO</a></li>
+        <li><a href="#craft">ARTESANÍA</a></li>
+        <li><a href="#contact">BOUTIQUE</a></li>
+        <div class="header-action">
+            <a href="#contact" style="text-decoration: none;"><button class="btn-emerald"
+                    style="margin: 0; padding: 10px 30px;">RESERVAR</button></a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1557170334-a9632e77c6e4?auto=format&fit=crop&q=80&w=2000"
+                class="hero-video-bg" alt="Emerald Essence">
+
+            <div class="hero-content">
+                <p style="letter-spacing: 10px; opacity: 0.6; margin-bottom: 20px; font-size: 0.8rem;">THE EMERALD
+                    SERIES</p>
+                <h1 class="title-hero scroll-text">Deep <span class="text-gold italic">Aura</span></h1>
+                <h2 style="font-family: var(--font-sans); font-weight: 200; letter-spacing: 5px; margin-top: 10px;">
+                    ESSENCE OF EXCELLENCE</h2>
+                <div class="reveal-up">
+                    <a href="#collection" style="text-decoration: none;"><button class="btn-emerald">DESCUBRIR LA
+                            MAGIA</button></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CRAFTSMANSHIP -->
+        <section id="craft" class="split-section">
+            <img src="https://images.unsplash.com/photo-1583209814683-c023dd293cc6?auto=format&fit=crop&q=80&w=1200"
+                alt="Master Perfumer" class="split-img reveal-left">
+            <div class="split-content reveal-right">
+                <span class="text-gold" style="letter-spacing: 4px; font-weight: 600;">HERENCIA</span>
+                <h2 class="title-sec">Un Siglo de <br><span class="italic">Sabiduría</span></h2>
+                <p style="margin-top: 40px; font-size: 1.1rem; line-height: 1.8; opacity: 0.8;">Extraemos el alma de la
+                    tierra. Nuestros procesos de destilación en frío preservan la pureza absoluta de los botánicos
+                    esmeralda, recolectados bajo la luna llena.</p>
+                <a href="#collection"
+                    style="display: block; margin-top: 40px; color: var(--accent-gold); font-weight: 700; text-decoration: none; letter-spacing: 3px;">LA
+                    FILOSOFÍA →</a>
+            </div>
+        </section>
+
+        <!-- CATALOGUE SECTION -->
+        <section id="catalogue">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <span class="text-gold" style="letter-spacing: 5px; font-weight: 600;">DISCOVER</span>
+                <h2 class="title-sec">El Catálogo <span class="text-gold">Perform</span></h2>
+                <div class="filter-tabs"
+                    style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; border-bottom: 1px solid rgba(11, 43, 38, 0.1); padding-bottom: 20px;">
+                    <button class="filter-btn active" data-filter="all">TODOS</button>
+                    <button class="filter-btn" data-filter="emerald">EMERALD SERIES</button>
+                    <button class="filter-btn" data-filter="midnight">MIDNIGHT NOIR</button>
+                    <button class="filter-btn" data-filter="aurore">L'AURORE</button>
+                </div>
+            </div>
+
+            <div class="grid-perfumes" id="perfume-grid">
+                <!-- Emerald Series -->
+                <div class="item-perfume emerald reveal-up">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=800"
+                        alt="Aura No. 1">
+                    <span class="category-label">EMERALD SERIES</span>
+                    <h3>AURA NO. 1</h3>
+                    <p class="notes">Bergamota, Neroli y Ámbar.</p>
+                    <span class="text-gold price">$320.00</span>
+                </div>
+                <div class="item-perfume emerald reveal-up">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800"
+                        alt="Teal Night">
+                    <span class="category-label">EMERALD SERIES</span>
+                    <h3>TEAL NIGHT</h3>
+                    <p class="notes">Incienso, Cuero y Ámbar.</p>
+                    <span class="text-gold price">$350.00</span>
+                </div>
+                <!-- V3.2 Expansion -->
+                <div class="item-perfume emerald reveal-up">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800"
+                        alt="Mineral Moss">
+                    <span class="category-label">EMERALD SERIES</span>
+                    <h3>MINERAL MOSS</h3>
+                    <p class="notes">Musgo de Roble, Rocío y Sal.</p>
+                    <span class="text-gold price">$280.00</span>
+                </div>
+
+                <!-- Midnight Noir -->
+                <div class="item-perfume midnight reveal-up">
+                    <img src="https://images.unsplash.com/photo-1523293182086-7651a899d226?auto=format&fit=crop&q=80&w=800"
+                        alt="Nocturne Oud">
+                    <span class="category-label">MIDNIGHT NOIR</span>
+                    <h3>NOCTURNE OUD</h3>
+                    <p class="notes">Oud, Sándalo y Vainilla Oscura.</p>
+                    <span class="text-gold price">$410.00</span>
+                </div>
+                <div class="item-perfume midnight reveal-up">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=800"
+                        alt="Tobacco Silk">
+                    <span class="category-label">MIDNIGHT NOIR</span>
+                    <h3>TOBACCO SILK</h3>
+                    <p class="notes">Hoja de Tabaco, Especias y Cacao.</p>
+                    <span class="text-gold price">$380.00</span>
+                </div>
+                <!-- V3.2 Expansion -->
+                <div class="item-perfume midnight reveal-up">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800"
+                        alt="Leather Ghost">
+                    <span class="category-label">MIDNIGHT NOIR</span>
+                    <h3>LEATHER GHOST</h3>
+                    <p class="notes">Cuero Ruso, Abedul y Humo.</p>
+                    <span class="text-gold price">$430.00</span>
+                </div>
+
+                <!-- L'Aurore -->
+                <div class="item-perfume aurore reveal-up">
+                    <img src="https://images.unsplash.com/photo-1585128719715-46776b56a0d1?auto=format&fit=crop&q=80&w=800"
+                        alt="Neroli Bloom">
+                    <span class="category-label">L'AURORE</span>
+                    <h3>NEROLI BLOOM</h3>
+                    <p class="notes">Neroli, Jazmín y Almizcle Blanco.</p>
+                    <span class="text-gold price">$245.00</span>
+                </div>
+                <div class="item-perfume aurore reveal-up">
+                    <img src="https://images.unsplash.com/photo-1615485500704-a1a90f484c60?auto=format&fit=crop&q=80&w=800"
+                        alt="White Iris">
+                    <span class="category-label">L'AURORE</span>
+                    <h3>WHITE IRIS</h3>
+                    <p class="notes">Iris, Lavanda y Sándalo Cremoso.</p>
+                    <span class="text-gold price">$270.00</span>
+                </div>
+                <!-- V3.2 Expansion -->
+                <div class="item-perfume aurore reveal-up">
+                    <img src="https://images.unsplash.com/photo-1616984242997-d73138f29792?auto=format&fit=crop&q=80&w=800"
+                        alt="Rose Absolu">
+                    <span class="category-label">L'AURORE</span>
+                    <h3>ROSE ABSOLU</h3>
+                    <p class="notes">Rosa de Grasse, Miel y Pimienta Rosa.</p>
+                    <span class="text-gold price">$310.00</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOUTIQUE INTERACTIVE -->
+        <section id="contact"
+            style="background-color: var(--emerald-deep); color: var(--text-white); text-align: center;">
+            <div class="reveal-up">
+                <h2 class="title-sec">Visita la <span class="text-gold">Boutique Secret</span></h2>
+                <p style="opacity: 0.7; max-width: 600px; margin: 40px auto; line-height: 2;">Una experiencia sensorial
+                    solo bajo invitación privada. Ingresa tu esencia digital para comenzar.</p>
+                <form id="access-form" style="margin-top: 60px;">
+                    <input type="text" placeholder="TU NOMBRE EN ORO" required
+                        style="background: transparent; border: none; border-bottom: 2px solid var(--accent-gold); padding: 20px; width: 300px; color: var(--white); text-align: center; font-family: var(--font-serif); font-size: 1.2rem; outline: none; margin-bottom: 40px;">
+                    <br>
+                    <button type="submit" class="btn-emerald">SOLICITAR ACCESO</button>
+                </form>
+                <div id="form-success"
+                    style="display: none; color: var(--accent-gold); margin-top: 30px; font-family: var(--font-serif); letter-spacing: 2px;">
+                    SOLICITUD ENVIADA CON EXITO. TE CONTACTAREMOS PRONTO.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        style="background-color: #051412; padding: 100px 10%; color: var(--text-white); display: flex; justify-content: space-between;">
+        <div class="logo" style="color: var(--text-white); font-size: 1.2rem;">PERFORM.</div>
+        <div style="display: flex; gap: 60px; font-size: 0.6rem; letter-spacing: 3px; opacity: 0.5;">
+            <p>INSTAGRAM</p>
+            <p>VOGUE EXCLUSIVE</p>
+            <p>LEGAL</p>
+        </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" id="backToTop">↑</a>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
